@@ -29,11 +29,12 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   console.error('getDb not implemented');
   const contactDb = await openDB("jate", 1);
-  const tx = contactDb.transaction('jate', 'readcontent');
+  const tx = contactDb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
   const request = store.getAll();
   const result = await request;
 
+  console.log(result)
   return result?.value;
 }
 initdb();

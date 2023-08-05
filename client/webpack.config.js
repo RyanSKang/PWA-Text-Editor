@@ -18,12 +18,57 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // To inject our js bundles into generated html file
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: "JATE"
+      }),
+      // Injects custom service workers
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js'
+      }),
+      // Creating manifest.json
+      new WebpackPwaManifest({
+        fingerprints: false, 
+        inject: true, 
+        short_name: "JATE",
+        name: "JATE",
+        description: "Just another text editor",
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 102, 256, 384, 512],
+            destiation: path.join('assets', 'icons')
+          },
+        ],
+        publicPath: '/',
+        start_url: '/',
+        background_color: "#e27eb4",
+        theme_color: "#e27eb4"
+      }),
     ],
 
     module: {
       rules: [
-        
+        // CSS Loaders
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader']
+        },
+        // Babel Loaders
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use:{
+            loaders: 'babel-loader',
+            options: {
+              presets: ['@babel/present-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread',
+                        '@babel/transform-runtime']
+            }
+          }
+        }
       ],
     },
   };
