@@ -55,16 +55,37 @@ Following Installation Needed:
     -Express [v4.17.1](https://www.npmjs.com/package/express/v/4.17.1)  
     -If-env  [v1.0.4](https://www.npmjs.com/package/if-env)  
     -Concurrently [v5.2.1](https://www.npmjs.com/package/concurrently/v/5.2.0)  
-    -Nodemon [v2.0.4](https://https://www.npmjs.com/package/nodemon/v/2.0.4.npmjs.com/package/nodemon)
+    -Nodemon [v2.0.4](https://https://www.npmjs.com/package/nodemon/v/2.0.4.npmjs.com/package/nodemon)  
+    -Webpack [v5.51.1](https://www.npmjs.com/package/webpack/v/5.51.1)  
+    -Webpack-dev-server [v4.15.1](https://www.npmjs.com/package/webpack-dev-server)  
+    -Babel-Loader [v8.2.2](https://www.npmjs.com/package/babel-loader/v/8.2.2)  
+
    
 
 ## Usage Instructions
-1. 
+1. In terminal execute an "npm i"  
+2. In terminal execute an "npm run build"  
+3. In terminal execute an "npm run start" 
+4. Either open html on live server OR go to deployed application here:  
+    -<a href="https://ryans-pwa-texteditor-f2ff23e03321.herokuapp.com/"> Heroku Deployed Application</a>
+
   
 
 ## Screenshots
-### Figure 1.
+### Figure 1. Live Browser Application
+<img width="1507" alt="Screenshot 2023-08-05 at 2 21 25 PM" src="https://github.com/RyanSKang/PWA-Text-Editor/assets/124969918/fcfed753-b0a3-4fc7-810b-20fca958c578">  
 
+### Figure 2. Offline application
+<img width="1195" alt="Screenshot 2023-08-05 at 2 21 45 PM" src="https://github.com/RyanSKang/PWA-Text-Editor/assets/124969918/043be23e-bfb5-48e8-acc6-9687d268dcf8">  
+
+### Figure 3. Manifest.Json
+<img width="780" alt="Screenshot 2023-08-05 at 2 22 07 PM" src="https://github.com/RyanSKang/PWA-Text-Editor/assets/124969918/fde31888-782c-4732-b81a-4f5aec0f60ff">  
+
+### Figure 4. Service Workers
+<img width="1011" alt="Screenshot 2023-08-05 at 2 22 18 PM" src="https://github.com/RyanSKang/PWA-Text-Editor/assets/124969918/b2b82aad-4f30-4b4d-8c4c-157595ad7192">  
+
+### Figure 5. IndexedDB
+<img width="508" alt="Screenshot 2023-08-05 at 2 22 54 PM" src="https://github.com/RyanSKang/PWA-Text-Editor/assets/124969918/80128b3e-a6a3-49db-83c7-4db7ae4599ac">
 
 ## Credits
 -DU-Virt-FSF-PT-02-2023-U-LOLC | NoSQL 28-Stu_Mini-Project  
